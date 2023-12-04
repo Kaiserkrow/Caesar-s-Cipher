@@ -8,6 +8,7 @@ function encryptDecryptTextOne() {
   const asciiA = "a".codePointAt(0);
   const asciiZ = "z".codePointAt(0);
   textAreaOne = document.getElementById("one").value;
+  textAreaOne.toLowerCase();
   let encMessage = "";
 
   for (let chr of textAreaOne) {
@@ -28,6 +29,7 @@ function encryptDecryptTextTwo() {
   const asciiA = "a".codePointAt(0);
   const asciiZ = "z".codePointAt(0);
   textAreaTwo = document.getElementById("two").value;
+  textAreaTwo.toLowerCase();
   let encMessage = "";
 
   for (let chr of textAreaTwo) {
