@@ -30,7 +30,7 @@ function encryptDecryptTextTwo() {
   textAreaTwo = document.getElementById("two").value;
   let encMessage = "";
 
-  for (let chr of textAreaOne) {
+  for (let chr of textAreaTwo) {
     let code = chr.codePointAt(0);
 
     if (code >= asciiA && code <= asciiZ) {
