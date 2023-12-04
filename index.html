@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Caesar's Cipher</title>
+    <link rel="icon" type="image/x-icon" href="./asset/lol.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="dist/css/main.css" />
+  </head>
+  <body>
+    <!-- Made by Andrew Garcia BSCS - 3B -->
+    <div class="background">
+      <div class="card-container">
+        <div>
+          <h1 class="title">Caesar's Cipher <br /></h1>
+          <span id="choice" class="blue-color title" onclick="choiceChange()"
+            >Encode</span
+          >
+        </div>
+
+        <div class="container">
+          <div class="card">
+            <span id="first-text">Plain Text</span>
+            <textarea
+              class="textarea"
+              id="one"
+              placeholder="Enter a message..."
+              oninput="encryptDecryptTextOne()"
+              onchange="encryptDecryptTextOne()"
+            ></textarea>
+          </div>
+          <div class="card">
+            <span>Shift</span>
+            <div>
+              <span id="shift">
+                <span>a → <span id="to-shift-alpha">a</span></span></span
+              >
+            </div>
+            <div id="counter">
+              <div class="padding option minus" onclick="shiftNumberMinus()">
+                <span class="plus-minus-correction">-</span>
+              </div>
+              <div class="num">
+                <input
+                  id="shift-input"
+                  class="input-num"
+                  value="0"
+                  type="number"
+                  placeholder="How many shift?"
+                  oninput="shiftNumberDirect()"
+                />
+              </div>
+              <div class="padding option plus" onclick="shiftNumberPlus()">
+                <span class="plus-minus-correction">+</span>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <span id="second-text">Cipher Text</span>
+            <textarea
+              class="textarea"
+              id="two"
+              oninput="encryptDecryptTextTwo()"
+              onchange="encryptDecryptTextTwo()"
+            ></textarea>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="./dist/js/main.js"></script>
+</html>
