@@ -36,7 +36,7 @@ function encryptDecryptTextTwo() {
     if (code >= asciiA && code <= asciiZ) {
       code -= asciiA;
 
-      code = mod(code + count, 26);
+      code = mod(code + count * -1, 26);
       code += asciiA;
     }
     encMessage += String.fromCodePoint(code);
