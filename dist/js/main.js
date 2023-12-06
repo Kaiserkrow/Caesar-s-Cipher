@@ -35,14 +35,16 @@ function encryptDecryptTextTwo() {
   textAreaTwo.toLowerCase();
 
   let encMessage = "";
-
+  if (choice == 0) {
+    shift = shift * -1;
+  }
   for (let chr of textAreaTwo) {
     let code = chr.codePointAt(0);
 
     if (code >= asciiA && code <= asciiZ) {
       code -= asciiA;
 
-      code = mod(code + shift * -1, 26);
+      code = mod(code + shift, 26);
       code += asciiA;
     }
     encMessage += String.fromCodePoint(code);
