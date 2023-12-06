@@ -104,6 +104,8 @@ function shiftNumberDirect() {
     count = inputValue;
   }
   document.getElementById("shift-input").value = count;
+  shiftNumberPlus();
+  shiftNumberMinus();
   toShiftAlpha();
   encryptDecryptTextOne();
 }
