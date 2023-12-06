@@ -88,7 +88,9 @@ function shiftNumberPlus() {
 }
 
 function shiftNumberMinus() {
-  count--;
+  if (count != 0) {
+    count--;
+  }
   toShiftAlpha();
   document.getElementById("shift-input").value = count;
   encryptDecryptTextOne();
@@ -96,7 +98,12 @@ function shiftNumberMinus() {
 
 function shiftNumberDirect() {
   let inputValue = document.getElementById("shift-input").value;
-  count = inputValue;
+  if (inputValue < 0) {
+    count = 0;
+  } else {
+    count = inputValue;
+  }
+  document.getElementById("shift-input").value = count;
   toShiftAlpha();
   encryptDecryptTextOne();
 }
